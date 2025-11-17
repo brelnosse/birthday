@@ -1,0 +1,35 @@
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: yellow;
+    gap: 20px;
+    padding: 20px;
+    height: 80vh;
+    max-height: 800px;
+}
+.s-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.s-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s-img-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: pink;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+.s-img-container img{
+    height: 500px;
+}
