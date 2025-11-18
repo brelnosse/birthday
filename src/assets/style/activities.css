@@ -1,8 +1,13 @@
 .activity-container{
-    display: grid;
+    flex: 1;
+    display: inline-grid;
+    justify-self: center;
     grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
     justify-content: center;
-    gap: 50px;
+    align-content: center;
+    justify-items: center;
     width: 100%;
-    background-color: red;
+    row-gap: 50px;
+    /* background-color: pink; */
 }

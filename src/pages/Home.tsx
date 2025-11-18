@@ -3,6 +3,7 @@ import Countdown from '../assets/components/Countdown';
 import moi from '../assets/images/moi.png';
 import Activities from '../assets/components/Activities';
 import Navbar from '../assets/components/Navbar';
+import Button from '../assets/components/Button';
 
 export default function Home(){
     return (
@@ -140,7 +141,7 @@ export default function Home(){
                             </div>
                         </div>
                         <div className="inv-footer">
-                            <button>Recevoir mon invitation</button>
+                            <Button text="Recevoir mon invitation"/>
                         </div>
                     </form>
                 </section>

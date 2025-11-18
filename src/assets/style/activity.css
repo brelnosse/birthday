@@ -1,22 +1,27 @@
 .activity{
-    background-color: blue;
-    display: flex;
+    background-color: var(--primary-fade-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 150px 1fr;
     align-items: center;
+    justify-items: center;
     justify-content: center;
-    flex-direction: column;
-    height: 200px;
+    height: auto;
+    min-height: 200px;
     padding: 20px;
-    width: 200px;
-    max-width: 400px;
-    gap: 10px;
+    width: 150px;
+    max-width: 300px;
+    /* gap: 10px; */
 }
 .activity img{
-    height: 120px;
-    width: 120px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 .activity h4{
-    font-size: 2em;
+    font-size: 1.4em;
     text-align: center;
+    font-family: 'Poppins';
+    font-weight: 500;
 }

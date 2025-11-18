@@ -1,29 +1,33 @@
 :root{
     --primary-color: rgb(180, 1, 180);
-    --primary-fade-color: rgba(223, 0, 223, 0.295);
+    --primary-fade-color: rgba(223, 0, 223, 0.093);
+    --primary-dark-color: rgb(144, 0, 144);
 }
 *{
     padding: 0px;
     margin: 0px;
 }
+*:focus{
+    outline: none;
+}
 body{
-
+    
 }
 .container{
-    background-color: rgba(230,230,230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
 }
 .section{
+    width: 100%;
     max-width: 1700px;
 }
 section h1{
     text-align: center;
     font-family: 'Bad script';
+    font-size: 4em;
 }
-#second h1{
-    margin: 40px 0px;
-}
-#third{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+section:not(#main) h1{
+    color: var(--primary-color);
 }
