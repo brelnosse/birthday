@@ -1,0 +1,13 @@
+.btn{
+    display: inline-flex;
+    height: 50px;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Poppins';
+    color: white;
+    background-color: var(--primary-color);
+}

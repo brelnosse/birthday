@@ -1,22 +1,12 @@
 nav{
-    height: 80px;
-    background-color: white;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.004);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0px 20px;
+    position: fixed;
+    top: 0px;
     width: calc(100% - 40px);
-}
-
-.btn{
-    display: inline-flex;
-    height: 50px;
-    padding: 0px 20px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    color: white;
-    background-color: purple;
 }

@@ -1,9 +1,11 @@
 import '../style/navbar.css';
 
+import Button from './Button';
+
 export default function Navbar(){
     return (
         <nav className="navbar">
-            <a href="#" className='btn'>Se connecter</a>
+            <Button to="/" text='Se connecter'/>
         </nav>
     );
 }
