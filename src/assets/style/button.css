@@ -19,3 +19,8 @@
 .btn:hover{
     background-color: var(--primary-dark-color);
 }
+
+.btn-icon{
+    margin-right: 5px;
+    margin-bottom: -1px;
+}

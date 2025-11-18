@@ -4,6 +4,7 @@ import moi from '../assets/images/moi.png';
 import Activities from '../assets/components/Activities';
 import Navbar from '../assets/components/Navbar';
 import Button from '../assets/components/Button';
+import EventsTree from '../assets/components/EventsTree';
 
 export default function Home(){
     return (
@@ -89,7 +90,12 @@ export default function Home(){
                 <section className="section" id='third'>
                     <h1>Détails de l'évènement</h1>
                     <h5>50 rue de rochechouart, 87000 limoges</h5>
-
+                    <EventsTree branches={[
+                        'Arrivée des invités',
+                        'Discours de bienvenue',
+                        'Déjeuné',
+                        'Diner'
+                    ]}/>
                 </section>
                 <section className="section" id='fourth'>
                     <h1>Invitation</h1>

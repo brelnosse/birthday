@@ -2,7 +2,7 @@
     flex: 1;
     display: inline-grid;
     justify-self: center;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, 250px);
     grid-template-rows: repeat(2, 200px);
     justify-content: center;
     align-content: center;
