@@ -1,0 +1,22 @@
+.activity{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    padding: 20px;
+    width: 200px;
+    max-width: 400px;
+    gap: 10px;
+}
+.activity img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.activity h4{
+    font-size: 2em;
+    text-align: center;
+}

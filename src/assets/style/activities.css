@@ -1,0 +1,8 @@
+.activity-container{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    background-color: red;
+}

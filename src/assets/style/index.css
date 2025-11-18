@@ -8,3 +8,17 @@ body{
 .container{
     background-color: rgba(230,230,230);
 }
+.section{
+    max-width: 1700px;
+}
+section h1{
+    text-align: center;
+}
+#second h1{
+    margin: 40px 0px;
+}
+#third{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
