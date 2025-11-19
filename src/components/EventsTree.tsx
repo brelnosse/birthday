@@ -1,4 +1,4 @@
-import '../style/eventsTree.css';
+import '../assets/style/eventsTree.css';
 type EventsTreeProps = {
     branches: Array<string>;
 };

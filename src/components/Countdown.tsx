@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import '../style/countdown.css';
+import '../assets/style/countdown.css';
 
 type CountdownCellProps = {
     digits: Array<number>;

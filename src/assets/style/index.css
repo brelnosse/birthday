@@ -1,7 +1,11 @@
 :root{
-    --primary-color: rgb(180, 1, 180);
+    --primary-color: #4fa0dd;
+    --primary-fade-color: #4f9fdd4e;
+    --primary-hard-color: rgb(0, 106, 187);
+    --primary-dark-color: #317eb8;
+    /* --primary-color: rgb(180, 1, 180);
     --primary-fade-color: rgba(223, 0, 223, 0.093);
-    --primary-dark-color: rgb(144, 0, 144);
+    --primary-dark-color: rgb(144, 0, 144); */
 }
 *{
     padding: 0px;
@@ -13,6 +17,7 @@
 body{
     
 }
+
 .container{
     display: flex;
     flex-direction: column;

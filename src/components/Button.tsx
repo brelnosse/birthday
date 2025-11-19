@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import '../style/button.css';
+import '../assets/style/button.css';
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 type IconProps = {

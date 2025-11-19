@@ -1,4 +1,4 @@
-import '../style/activity.css';
+import '../assets/style/activity.css';
 
 type Activityprops = {
     image: string;

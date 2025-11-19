@@ -1,14 +1,16 @@
 import '../assets/style/home.css';
-import Countdown from '../assets/components/Countdown';
+import Countdown from '../components/Countdown';
 import moi from '../assets/images/moi.png';
-import Activities from '../assets/components/Activities';
-import Navbar from '../assets/components/Navbar';
-import Button from '../assets/components/Button';
-import EventsTree from '../assets/components/EventsTree';
+import Activities from '../components/Activities';
+import Navbar from '../components/Navbar';
+import Button from '../components/Button';
+import EventsTree from '../components/EventsTree';
+import { Confetti } from '../components/Confetti';
 
 export default function Home(){
     return (
         <>
+            <Confetti />
             <Navbar />
             <div className="container">
                 <section className='section' id='main'>
