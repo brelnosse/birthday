@@ -3,11 +3,14 @@ import '../assets/style/eventsTree.css';
 import 'animate.css';
 
 type EventsTreeProps = {
-    branches: Array<string>;
+    branches: Array<ColumnProps>;
 };
 type ColumnProps = {
     key: number, 
-    value: string
+    heure?: string,
+    value: string;
+    image?: string;
+    description?: string;
 };
 
 export default function EventsTree({branches}: EventsTreeProps){
@@ -21,16 +24,16 @@ export default function EventsTree({branches}: EventsTreeProps){
     );
 }    
 
-const Branches = ({list}:{list: Array<string>}) =>{
+const Branches = ({list}:{list: Array<ColumnProps>}) =>{
     let col1:Array<ColumnProps> = [];
     let col2:Array<ColumnProps> = [];
 
     for(let i = 0; i < list.length; i++){
         if((i+1)%2 === 1){
-            col1.push({key: i, value: list[i]});
+            col1.push({key: list[i].key, heure: list[i].heure, value: list[i].value, image: list[i].image, description: list[i].description});
             col2.push({key: -1, value: ''})
         }else{
-            col2.push({key: i, value: list[i]});
+            col2.push({key: list[i].key, heure: list[i].heure, value: list[i].value, image: list[i].image, description: list[i].description});
             col1.push({key: -1, value: ''})
         }
     }
@@ -41,7 +44,12 @@ const Branches = ({list}:{list: Array<string>}) =>{
                     col1.map((el: ColumnProps, i: number) => 
                         (el.key === -1) ? 
                         <div id="branch" key={'branch-'+el.value+''+i}></div> : 
-                        <Col colId={1} child={el} key={'col1-branch-'+el.value+''+i}/>
+                        <Col 
+                            colId={1} 
+                            child={el} 
+                            key={'col1-branch-'+el.value+''+i}
+                            image={el.image} 
+                            description={el.description}/>
                     )
                 }
             </div>
@@ -50,7 +58,12 @@ const Branches = ({list}:{list: Array<string>}) =>{
                     col2.map((el: ColumnProps, i: number) => 
                         (el.key === -1) ? 
                         <div id="branch" key={'branch-'+el.value+''+i}></div> : 
-                        <Col colId={2} child={el} key={'col2-branch-'+el.value+''+i}/>
+                        <Col 
+                            colId={2} 
+                            child={el} 
+                            key={'col2-branch-'+el.value+''+i} 
+                            image={el.image} 
+                            description={el.description}/>
                     )
                 }
             </div>
@@ -58,7 +71,7 @@ const Branches = ({list}:{list: Array<string>}) =>{
     );
 }
 
-const Col = ({colId, child}:{colId: number; child:  ColumnProps}) =>{
+const Col = ({colId, child, image, description}:{colId: number; child:  ColumnProps, image?: string; description?: string}) =>{
     const line = useRef<HTMLDivElement>(null);
     useEffect(()=>{
         let node = line.current;
@@ -86,11 +99,17 @@ const Col = ({colId, child}:{colId: number; child:  ColumnProps}) =>{
         }
     }, [colId]);
     return (
-        <div className="branch">
-            <span className='b-num'>{(child.key+1)%10 === (child.key+1) ? '0'+(child.key+1) : child.key}</span>
-            <h4 style={{overflow: 'hidden'}}>
-                <p ref={line} style={{opacity: 0}}>{child.value}</p>
-            </h4>
+        <div className="branch" ref={line}>
+            <div className="branch-header">
+                <span className='b-num'>{(child.key+1)%10 === (child.key+1) ? '0'+(child.key+1) : child.key}</span>
+                <p >{child.value}</p>
+            </div>
+            {image && description && (
+            <figure>
+                <img src={image} alt={child.value} />
+                <figcaption>{description}</figcaption>
+            </figure>
+            )}
         </div>
     );
 }

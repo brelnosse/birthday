@@ -19,10 +19,12 @@
 .btn:hover{
     background-color: var(--primary-dark-color);
 }
-
-.btn-icon.mg-5{
+.btn-icon.mr-5{
     margin-right: 5px;
 }
+.btn-icon.ml-5{
+    margin-left: 5px;
+}
 .btn-icon{
-    margin-bottom: -1px;
+    margin-bottom: 2px;
 }

@@ -22,12 +22,12 @@ export default function Button({icon, to, text}: Buttonprops){
             {!icon ? text:
                 icon.position === 'beforeText' ?
                 <>
-                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text? 'mg-5' : ''}`}/>
+                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text? 'mr-5' : ''}`}/>
                     {text}
                 </>:
                 <>
                     {text}
-                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text ? 'mg-5' : ''}`}/>
+                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text ? 'ml-5' : ''}`}/>
                 </>            
             }
         </button>

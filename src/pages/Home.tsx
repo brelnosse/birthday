@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import EventsTree from '../components/EventsTree';
 import { Confetti } from '../components/Confetti';
 import VideoBackground from '../components/VideoBackground';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(){
     return (
@@ -44,6 +45,14 @@ export default function Home(){
                                 ]
                             }/>
                         </div>
+                        <p>
+                            <Button 
+                                text='Recevoir mon invitation' 
+                                icon={{
+                                    name: fas.faCakeCandles,
+                                    position: 'beforeText'
+                                }}/>
+                        </p>
                     </div>
                     <div className="s-image">
                         <div className="s-img-container">
@@ -87,15 +96,39 @@ export default function Home(){
                     <h1>Détails de l'évènement</h1>
                     <h5>50 rue de rochechouart, 87000 limoges</h5>
                     <EventsTree branches={[
-                        'Arrivée des invités',
-                        'Discours de bienvenue',
-                        'Déjeuné',
-                        'Diner'
+                        {
+                            key: 0,
+                            heure: '10:00 AM',
+                            value: 'Arrivée des invités',
+                            image: moi,
+                            description: 'Arrivée des invités'
+                        },
+                        {
+                            key: 1,
+                            heure: '10:00 AM',
+                            value: 'Discours de bienvenue',
+                            image: moi,
+                            description: 'Discours de bienvenue'
+                        },
+                        {
+                            key: 2,
+                            heure: '12:00 PM',
+                            value: 'Déjeuné',
+                            image: moi,
+                            description: 'Déjeuné'
+                        },
+                        {
+                            key: 3,
+                            heure: '10:00 AM',
+                            value: 'Arrivée des invités',
+                            image: moi,
+                            description: 'Diner'
+                        }
                     ]}/>
                 </section>
                 <section className="section" id='fourth'>
-                    <h1>Invitation</h1>
                     <form className="invitation-form">
+                        <h1>Invitation</h1>
                         <div className="inv-header">
                             <div className="inv-group">
                                 <label htmlFor="inv-name">Nom et prenom</label>
@@ -146,6 +179,9 @@ export default function Home(){
                             <Button text="Recevoir mon invitation"/>
                         </div>
                     </form>
+                    <div className="sideImg">
+                        <img src={require('../assets/images/84517.jpg')} alt="Femme tenant un ballon en main" />
+                    </div>
                 </section>
             </div>
         </>

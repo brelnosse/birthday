@@ -1,56 +1,107 @@
 .tree-container{
-    /* background-color: blue; */
     display: flex;
     margin: 20px 0px;
     padding: 50px 0px;
+    width: calc(90% - 40px);
+    overflow: hidden;
 }
 .col1{
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+.col1 .branch{
+    border-left: 4px solid var(--primary-dark-color);
 }
 .col2{
-    /* background-color: green; */
+    width: 100%;
+}
+.col1 #branch{
+    border-right: 4px solid var(--primary-dark-color);
 }
 #branch{
-    height: 120px;
+    height: 460px;
     background-color: transparent;
 }
 .branch{
     border: none;
-    width: calc(500px - 40px);
-    height: 100px;
-    padding-left: 40px;
+    width: calc(100% - 40px);
+    height: 400px;
+    padding: 20px;
+    /* opacity: 0; */
+    padding-left: 20px;
     background-color: transparent;
-    border-bottom: 4px solid var(--primary-dark-color);
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.branch figure {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.branch img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+}
+.branch figure figcaption{
+    position: absolute;
+    font-family: 'Poppins';
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.045), rgba(0, 0, 0, 0.533));
+    height: 100%;
+    color: white;
+    width: 100%;
 }
 .branch span{
     font-family: 'Poppins';
     font-size: 2em;
     background-color: var(--primary-dark-color);
     display: inline-flex;
-    height: 60px;
-    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
+    max-height: 60px;
+    max-width: 60px;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: white;
 }
-.branch h4{
+.branch-header{
+    display: flex;
+    overflow: hidden;
     font-family: 'Bad script';
     font-size: 2em;
+    font-weight: bold;
 }
+.branch div span{
+    font-family: 'Poppins';
+    font-size: 1.2em;
+}
+.branch div p{
+    padding-left: 20px;
+    font-family: 'Poppins';
+}
+
 .col1 #branch{
-    border-right-width: 4px;
+    /* border-right-width: 4px;
     border-right-color: var(--primary-dark-color);
-    border-right-style: solid;
+    border-right-style: solid; */
 }
 .col1 .branch{
-    border-right-width: 4px;
+    /* border-right-width: 4px;
     border-right-color: var(--primary-dark-color);
-    border-right-style: solid;
+    border-right-style: solid; */
 }
 .col2 .branch{
-    border-left-width: 0px;
 }
