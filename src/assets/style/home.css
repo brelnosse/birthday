@@ -9,7 +9,7 @@
     padding-top: 150px;
     height: 80vh;
     max-height: 600px;
-    background-image: radial-gradient(circle at 150px 300px, var(--primary-fade-color), white, white, white);
+    background-image: radial-gradient(circle at 150px 300px, var(--primary-fade-color), var(--primary-bg-color), var(--primary-bg-color), var(--primary-bg-color));
     background-position: center top;
 }
 #main h1{
@@ -92,7 +92,7 @@
     margin: 30px 0px;
     margin-bottom: 0px;
     padding-bottom: 40px;
-    background-image: radial-gradient(circle at 100% 100%, var(--primary-color), white, white, white, white, white);
+    background-image: radial-gradient(circle at 100% 100%, var(--primary-color), var(--primary-bg-color), var(--primary-bg-color), var(--primary-bg-color), var(--primary-bg-color), var(--primary-bg-color));
 }
 #fourth form{
     display: flex;
