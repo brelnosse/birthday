@@ -18,11 +18,11 @@
 }
 .branch{
     border: none;
-    width: calc(400px - 40px);
+    width: calc(500px - 40px);
     height: 100px;
     padding-left: 40px;
     background-color: transparent;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid var(--primary-dark-color);
     padding-bottom: 20px;
 }
 .branch span{
@@ -43,12 +43,12 @@
 }
 .col1 #branch{
     border-right-width: 4px;
-    border-right-color: black;
+    border-right-color: var(--primary-dark-color);
     border-right-style: solid;
 }
 .col1 .branch{
     border-right-width: 4px;
-    border-right-color: black;
+    border-right-color: var(--primary-dark-color);
     border-right-style: solid;
 }
 .col2 .branch{

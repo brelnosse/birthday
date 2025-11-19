@@ -1,4 +1,7 @@
+import { useEffect, useRef } from 'react';
 import '../assets/style/eventsTree.css';
+import 'animate.css';
+
 type EventsTreeProps = {
     branches: Array<string>;
 };
@@ -18,7 +21,7 @@ export default function EventsTree({branches}: EventsTreeProps){
     );
 }    
 
-const Branches= ({list}:{list: Array<string>}) =>{
+const Branches = ({list}:{list: Array<string>}) =>{
     let col1:Array<ColumnProps> = [];
     let col2:Array<ColumnProps> = [];
 
@@ -34,31 +37,60 @@ const Branches= ({list}:{list: Array<string>}) =>{
     return (
         <>
             <div className="col1">
-                {col1.map((el: ColumnProps, i:number) =>
-                    (el.key === -1) ? 
-                    (
-                        <div id="branch"></div>
-                    ): (
-                        <div className="branch" key={'col1-branch-'+el.value+''+i}>
-                            <span className='b-num'>{(el.key+1)%10 === (el.key+1) ? '0'+(el.key+1) : el.key}</span>
-                            <h4>{el.value}</h4>
-                        </div>
+                {
+                    col1.map((el: ColumnProps, i: number) => 
+                        (el.key === -1) ? 
+                        <div id="branch" key={'branch-'+el.value+''+i}></div> : 
+                        <Col colId={1} child={el} key={'col1-branch-'+el.value+''+i}/>
                     )
-                )}
+                }
             </div>
             <div className="col2">
-                {col2.map((el: ColumnProps, i:number) =>
-                    (el.key === -1) ? 
-                    (
-                        <div id="branch"></div>
-                    ): (
-                        <div className="branch" key={'col2-branch-'+el.value+''+i}>
-                            <span className='b-num'>{(el.key+1)%10 === (el.key+1) ? '0'+(el.key+1) : el.key}</span>
-                            <h4>{el.value}</h4>
-                        </div>
+                {
+                    col2.map((el: ColumnProps, i: number) => 
+                        (el.key === -1) ? 
+                        <div id="branch" key={'branch-'+el.value+''+i}></div> : 
+                        <Col colId={2} child={el} key={'col2-branch-'+el.value+''+i}/>
                     )
-                )}
+                }
             </div>
         </>
+    );
+}
+
+const Col = ({colId, child}:{colId: number; child:  ColumnProps}) =>{
+    const line = useRef<HTMLDivElement>(null);
+    useEffect(()=>{
+        let node = line.current;
+        const observer = new IntersectionObserver(entries =>{
+            if(entries[0].isIntersecting){
+                line.current?.classList.add("animate__animated");
+                if(colId === 1){
+                    line.current?.classList.add("animate__fadeInLeft");
+                }else{
+                    line.current?.classList.add("animate__fadeInRight");                    
+                }
+            }else{
+                line.current?.classList.remove("animate__animated");
+                if(colId === 1){
+                    line.current?.classList.remove("animate__fadeInLeft");
+                }else{
+                    line.current?.classList.remove("animate__fadeInRight");
+                }
+            }
+        })
+        if(node) observer.observe(node);
+        return ()=>{
+            if(node) observer.unobserve(node)
+            observer.disconnect()
+        }
+    }, [colId]);
+    return (
+        <div className="branch">
+            <span className='b-num'>{(child.key+1)%10 === (child.key+1) ? '0'+(child.key+1) : child.key}</span>
+            <h4 style={{overflow: 'hidden'}}>
+                <p ref={line} style={{opacity: 0}}>{child.value}</p>
+            </h4>
+        </div>
     );
 }

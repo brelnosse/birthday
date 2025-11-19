@@ -77,14 +77,6 @@ export default function Home(){
                             {
                                 image: moi,
                                 title: 'Camping cart'
-                            },
-                                                    {
-                                image: moi,
-                                title: 'Course'
-                            },
-                            {
-                                image: moi,
-                                title: 'Camping cart'
                             }
                         ]}
                     />
