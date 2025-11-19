@@ -11,8 +11,7 @@ export default function Navbar(){
                 name: far.faUser,
                 position: 'beforeText'
             }} 
-            to="/" 
-            text='Se connecter'/>
+            to="/"/>
         </nav>
     );
 }

@@ -4,8 +4,8 @@
     justify-content: center;
     background-color: white;
     gap: 20px;
-    width: calc(100% - 40px);
-    padding: 20px;
+    width: calc(100% - 80px);
+    padding: 20px 40px;
     padding-top: 150px;
     height: 80vh;
     max-height: 600px;
@@ -62,19 +62,26 @@
     height: 500px;
 }
 #second{
-    height: 100vh;
+    height: calc(100vh + 70px);
     max-height: 800px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    /* padding-right: 50px; */
 }
 #second h1{
-    /* margin-bottom: 0px; */
+    position: relative;
+    z-index: 5;
+    margin-bottom: 20px;
+}
+#second .activity-container{
+    position: relative;
+    z-index: 5;
 }
 
 #third{
-    margin: 80px 0px;
+    /* margin: 80px 0px; */
     display: flex;
     flex-direction: column;
     align-items: center;   

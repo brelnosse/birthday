@@ -12,7 +12,7 @@ type IconProps = {
 type Buttonprops = {
     icon ?: IconProps;
     to ?: string;
-    text: string;
+    text ?: string;
 } & HTMLAttributes<HTMLButtonElement> & HTMLAttributes<HTMLLinkElement>;
 
 export default function Button({icon, to, text}: Buttonprops){
@@ -22,12 +22,12 @@ export default function Button({icon, to, text}: Buttonprops){
             {!icon ? text:
                 icon.position === 'beforeText' ?
                 <>
-                    <FontAwesomeIcon icon={icon.name} className="btn-icon"/>
+                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text? 'mg-5' : ''}`}/>
                     {text}
                 </>:
                 <>
                     {text}
-                    <FontAwesomeIcon icon={icon.name} className="btn-icon"/>
+                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text ? 'mg-5' : ''}`}/>
                 </>            
             }
         </button>
@@ -36,12 +36,12 @@ export default function Button({icon, to, text}: Buttonprops){
             {!icon ? text:
                 icon.position === 'beforeText' ?
                 <>
-                    <FontAwesomeIcon icon={icon.name} className="btn-icon"/>
+                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text ? 'mg-5' : ''}`}/>
                     {text}
                 </>:
                 <>
                     {text}
-                    <FontAwesomeIcon icon={icon.name} className="btn-icon"/>
+                    <FontAwesomeIcon icon={icon.name} className={`btn-icon ${text ? 'mg-5' : ''}`}/>
                 </>            
             }
         </Link>

@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 import EventsTree from '../components/EventsTree';
 import { Confetti } from '../components/Confetti';
+import VideoBackground from '../components/VideoBackground';
 
 export default function Home(){
     return (
@@ -51,6 +52,7 @@ export default function Home(){
                     </div>
                 </section>
                 <section className="section" id='second'>
+                    <VideoBackground />
                     <h1>Qu'est ce qui vous attends ?</h1>
                     <Activities 
                         activities={[

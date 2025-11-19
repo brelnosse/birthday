@@ -26,6 +26,7 @@ body{
     background-color: var(--primary-bg-color);
 }
 .section{
+    position: relative;
     width: 100%;
     max-width: 1700px;
 }

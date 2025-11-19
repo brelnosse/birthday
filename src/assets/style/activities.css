@@ -1,5 +1,4 @@
 .activity-container{
-    flex: 1;
     display: inline-grid;
     justify-self: center;
     grid-template-columns: repeat(3, 250px);
