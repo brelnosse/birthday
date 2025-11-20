@@ -4,7 +4,7 @@ import '../assets/style/videobg.css';
 export default function VideoBackground(){
     return (
       <div className="video-bg">
-        <video src={require("../assets/videos/anniv1.mp4")} autoPlay loop></video>
+        <video src={require("../assets/videos/anniv1.mp4")} autoPlay loop muted></video>
       </div>  
     );
 }

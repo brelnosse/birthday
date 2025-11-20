@@ -1,12 +1,52 @@
-.activity-container{
+.activity-container {
     display: inline-grid;
     justify-self: center;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
     justify-content: center;
     align-content: center;
     justify-items: center;
     width: 100%;
-    row-gap: 50px;
+    background-color: blue;
     /* background-color: pink; */
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.slider-window {
+    overflow: hidden;
+    width: 100%;
+}
+.slider-track {
+    display: flex;
+    /* transition plus utilisée ici */
+}
+.slider-track.infinite {
+    animation: slideinfinite 35s linear infinite;
+}
+.slider-item {
+    min-width: 350px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Responsive, ajuster les visibles si besoin */
+@media (max-width: 900px) {
+    .slider-item { min-width: 33.33%; }
+}
+@media (max-width: 600px) {
+    .slider-item { min-width: 50%; }
+}
+@media (max-width: 400px) {
+    .slider-item { min-width: 100%; }
+}
+
+/* Animation continue, adapte la durée pour la lisibilité (ici: 35s = lent) */
+@keyframes slideinfinite {
+    0% { transform: translateX(0%);}
+    100% { transform: translateX(-50%);}
 }

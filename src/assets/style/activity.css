@@ -1,27 +1,31 @@
-.activity{
+.activity {
     background-color: var(--primary-fade-color);
     border-radius: 10px;
     display: grid;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 300px 1fr;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    height: auto;
-    min-height: 200px;
-    padding: 20px;
-    width: 200px;
-    max-width: 350px;
+    min-height: 400px;
+    padding: 1.25rem; /* 20px */
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
     /* gap: 10px; */
 }
-.activity img{
-    height: 150px;
-    width: 150px;
+
+.activity img {
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
-.activity h4{
+
+.activity h4 {
     font-size: 1.4em;
     text-align: center;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    word-wrap: break-word;
 }
